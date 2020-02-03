@@ -1,0 +1,720 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "v1",
+      "title": "IdentiSign Identify",
+      "description": "This API enables authentication/identification through mutliple identityprvoiders such as Norwegian BankID, Swedish BankID, Nemid, etc.\r\n                        \r\n                        # Introduction\r\n                        This API is documented in **OpenAPI format** and is based on\r\n                        [Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.\r\n                        It was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)\r\n                        tool and [ReDoc](https://github.com/Rebilly/ReDoc) documentation. In addition to standard\r\n                        OpenAPI syntax we use a few [vendor extensions](https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md).\r\n\r\n                        # OpenAPI Specification\r\n                        This API is documented in **OpenAPI format** and is based on\r\n                        [Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.\r\n                        It was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)\r\n                        tool and [ReDoc](https://github.com/Rebilly/ReDoc) documentation. In addition to standard\r\n                        OpenAPI syntax we use a few [vendor extensions](https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md).\r\n                        # Cross-Origin Resource Sharing\r\n                        This API features Cross-Origin Resource Sharing (CORS) implemented in compliance with  [W3C spec](https://www.w3.org/TR/cors/).\r\n                        And that allows cross-domain communication from the browser.\r\n                        All responses have a wildcard same-origin which makes them completely public and accessible to everyone, including any code on any site.\r\n                        # Authentication\r\n                        Petstore offers two forms of authentication:\r\n                          - API Key\r\n                          - OAuth2\r\n                        OAuth2 - an open protocol to allow secure authorization in a simple\r\n                        <!-- ReDoc-Inject: <security-definitions> -->\r\n                    ",
+      "contact": {
+        "name": "Signere.no AS",
+        "url": "https://www.signere.no",
+        "email": "support@signere.no"
+      },
+      "x-logo": {
+        "url": "https://signerefiles.blob.core.windows.net/img/signere-logo.png",
+        "padding": "10px"
+      },
+      "x-codegen-settings": {
+        "nullify404": true,
+        "generateAsyncCode": true,
+        "useMethodPrefix": false,
+        "useModelPostfix": false,
+        "useControllerPostfix": false,
+        "useEnumPostfix": false,
+        "useConstructorsForConfig": true,
+        "csharpDefaultNamespace": "IdentiSign.Identification",
+        "javaDefaultPackageName": "io.identisign.identification.api",
+        "appendContentHeaders": true,
+        "brandLabel": "IdentiSign",
+        "userAgent": "APIMACTIC",
+        "enableAdditionalModelProperties": true,
+        "projectName": "IdentiSign.Identification",
+        "generateInterfaces": true,
+        "validateRequiredParameters": true
+      },
+      "x-server-configuration": {
+        "default-environment": "production",
+        "default-server": "default",
+        "environments": [
+          {
+            "name": "production",
+            "servers": [
+              {
+                "name": "default",
+                "url": "https://id.signere.no"
+              }
+            ]
+          },
+          {
+            "name": "test",
+            "servers": [
+              {
+                "name": "test",
+                "url": "https://idtest.signere.no"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "host": "rune10.unipluss.no",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/api/identify/{accountId}": {
+        "get": {
+          "tags": [
+            "Identify"
+          ],
+          "summary": "Response",
+          "description": "Gets the response of the identifaction process",
+          "operationId": "Response",
+          "consumes": [],
+          "produces": [
+            "application/json",
+            "text/json"
+          ],
+          "parameters": [
+            {
+              "name": "accountId",
+              "in": "path",
+              "description": "Your accountId",
+              "required": true,
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "name": "requestId",
+              "in": "query",
+              "description": "The requestId returned in the creation of the request",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "metaData",
+              "in": "query",
+              "description": "Should metadata be included in the response, only set to true if need (addons and user ceritifcate)",
+              "required": false,
+              "type": "boolean"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/IdentificationResponse"
+              }
+            },
+            "400": {
+              "description": "Bad request"
+            },
+            "401": {
+              "description": "Not authorized"
+            },
+            "500": {
+              "description": "Internal server error (Miscellaneous)"
+            }
+          },
+          "security": [
+            {
+              "oauth2": [
+                "root",
+                "identity"
+              ]
+            }
+          ]
+        },
+        "post": {
+          "tags": [
+            "Identify"
+          ],
+          "summary": "Create",
+          "description": "Create a new request to start the identification process",
+          "operationId": "Create",
+          "consumes": [
+            "application/json",
+            "text/json",
+            "application/x-www-form-urlencoded"
+          ],
+          "produces": [
+            "application/json",
+            "text/json"
+          ],
+          "parameters": [
+            {
+              "name": "accountId",
+              "in": "path",
+              "description": "Your accountId",
+              "required": true,
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "name": "request",
+              "in": "body",
+              "description": "A request object",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/CreateIdentificationRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/CreateIdentificationResponse"
+              }
+            },
+            "400": {
+              "description": "Bad request"
+            },
+            "401": {
+              "description": "Not authorized"
+            },
+            "500": {
+              "description": "Internal server error (Miscellaneous)"
+            }
+          },
+          "security": [
+            {
+              "oauth2": [
+                "root",
+                "identity"
+              ]
+            }
+          ]
+        }
+      },
+      "/api/identify/status/{accountId}": {
+        "get": {
+          "tags": [
+            "Identify"
+          ],
+          "summary": "IsComplete",
+          "description": "Checks the status of the identification process, returns OK if complete",
+          "operationId": "IsComplete",
+          "consumes": [],
+          "produces": [
+            "application/json",
+            "text/json"
+          ],
+          "parameters": [
+            {
+              "name": "accountId",
+              "in": "path",
+              "description": "Your accountId",
+              "required": true,
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "name": "requestId",
+              "in": "query",
+              "description": "The requestId returned in the creation of the request",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/IdentificationCompleteResponse"
+              }
+            },
+            "400": {
+              "description": "Bad request"
+            },
+            "401": {
+              "description": "Not authorized"
+            },
+            "500": {
+              "description": "Internal server error (Miscellaneous)"
+            }
+          },
+          "security": [
+            {
+              "oauth2": [
+                "root",
+                "identity"
+              ]
+            }
+          ]
+        }
+      },
+      "/api/identify/invalidate/{accountId}": {
+        "put": {
+          "tags": [
+            "Identify"
+          ],
+          "summary": "Invalidate",
+          "description": "Invalidate the identity request to avoid using the same request twice.",
+          "operationId": "Invalidate",
+          "consumes": [
+            "application/json",
+            "text/json",
+            "application/x-www-form-urlencoded"
+          ],
+          "produces": [
+            "application/json",
+            "text/json"
+          ],
+          "parameters": [
+            {
+              "name": "accountId",
+              "in": "path",
+              "description": "Your accountId",
+              "required": true,
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "name": "value",
+              "in": "body",
+              "description": "A request object",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/InvalidateIdentificationRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "type": "object"
+              }
+            },
+            "400": {
+              "description": "Bad request"
+            },
+            "401": {
+              "description": "Not authorized"
+            },
+            "500": {
+              "description": "Internal server error (Miscellaneous)"
+            }
+          },
+          "security": [
+            {
+              "oauth2": [
+                "root",
+                "identity"
+              ]
+            }
+          ]
+        }
+      },
+      "/api/no/bankid/mobile/{accountId}": {
+        "post": {
+          "tags": [
+            "NorwegianBankID"
+          ],
+          "summary": "BankIDMobile",
+          "description": "Create a new BankID mobile request to start the identification process. Returns requestID and a merchant ref.\r\nIf the user do not have BankID mobile of have inputed inncorrect values the InvalidMobileNumberOrDateOfBirth will be returned as true\r\nIf there is an error the error code will be returned also.",
+          "operationId": "BankIDMobile",
+          "consumes": [
+            "application/json",
+            "text/json",
+            "application/x-www-form-urlencoded"
+          ],
+          "produces": [
+            "application/json",
+            "text/json"
+          ],
+          "parameters": [
+            {
+              "name": "accountId",
+              "in": "path",
+              "description": "Your accountId",
+              "required": true,
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "name": "model",
+              "in": "body",
+              "description": "A request object",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/CreateBankIDMobileRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/CreateBankIDMobileResponse"
+              }
+            },
+            "400": {
+              "description": "Bad request"
+            },
+            "401": {
+              "description": "Not authorized"
+            },
+            "500": {
+              "description": "Internal server error (Miscellaneous)"
+            }
+          },
+          "security": [
+            {
+              "oauth2": [
+                "root",
+                "identity"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "definitions": {
+      "IdentificationResponse": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "FirstName": {
+            "type": "string"
+          },
+          "MiddleName": {
+            "type": "string"
+          },
+          "LastName": {
+            "type": "string"
+          },
+          "DateOfBirth": {
+            "type": "string"
+          },
+          "Status": {
+            "enum": [
+              "UNKOWN",
+              "SUCCESS",
+              "ERROR",
+              "USERABORTED",
+              "INVALIDATED",
+              "TIMEOUT"
+            ],
+            "type": "string"
+          },
+          "SocialSecurityNumber": {
+            "type": "string"
+          },
+          "IdentityProviderUniqueId": {
+            "type": "string"
+          },
+          "IdentityProvider": {
+            "enum": [
+              "UNKNOWN",
+              "NO_BANKID_MOBILE",
+              "NO_BANKID_WEB",
+              "SWE_BANKID",
+              "SWE_BANKID_MOBILE",
+              "NO_BUYPASS",
+              "DA_NEMID",
+              "FI_TUPAS",
+              "MOBILECONNECT",
+              "SMS_OTP"
+            ],
+            "type": "string"
+          },
+          "Error": {
+            "$ref": "#/definitions/Error"
+          },
+          "EnvironmentInfo": {
+            "$ref": "#/definitions/EnvironmentInfo"
+          },
+          "MetaData": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "RequestId": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "Name": "Wayne, Bruce Thomas",
+          "FirstName": "Bruce",
+          "MiddleName": "Thomas",
+          "LastName": "Wayne",
+          "DateOfBirth": "31.12.1971",
+          "Status": 1,
+          "SocialSecurityNumber": "23071212345",
+          "IdentityProviderUniqueId": "9578-6000-4-48855",
+          "IdentityProvider": 2,
+          "EnvironmentInfo": {
+            "UserAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Mobile/14A456",
+            "IPAddress": "192.168.1.0"
+          },
+          "MetaData": {
+            "no.personal.info": "JSON data"
+          },
+          "RequestId": "25191832985138881678wuuPNTgWL4Aq7RsIemzU8umZSsYNWcEFH1PbCVkdfHZjb6tfnyeTo4mDcvOoEP0z4zvvpcx0zoriRdYbETGLLwHJPkFXRjlRs0kpgeKvANFKkHA0CJGGFYQpbTfht08riaJcpKoRY4vHRJjANxfITbS7bYlFTFR37PEAqcsArnVrcuNyjnvp"
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "NativeErrorCode": {
+            "type": "string"
+          },
+          "ErrorCode": {
+            "type": "string"
+          },
+          "ErrorMessage": {
+            "type": "string"
+          }
+        }
+      },
+      "EnvironmentInfo": {
+        "type": "object",
+        "properties": {
+          "UserAgent": {
+            "type": "string"
+          },
+          "IPAddress": {
+            "type": "string"
+          }
+        }
+      },
+      "CreateIdentificationRequest": {
+        "required": [
+          "ReturnUrls"
+        ],
+        "type": "object",
+        "properties": {
+          "IdentityProvider": {
+            "enum": [
+              "UNKNOWN",
+              "NO_BANKID_MOBILE",
+              "NO_BANKID_WEB",
+              "SWE_BANKID",
+              "SWE_BANKID_MOBILE",
+              "NO_BUYPASS",
+              "DA_NEMID",
+              "FI_TUPAS",
+              "MOBILECONNECT",
+              "SMS_OTP"
+            ],
+            "type": "string"
+          },
+          "ReturnUrls": {
+            "$ref": "#/definitions/ReturnUrls"
+          },
+          "iFrame": {
+            "$ref": "#/definitions/iFrameSettings"
+          },
+          "Language": {
+            "enum": [
+              "NO",
+              "EN",
+              "SV",
+              "DA",
+              "FI"
+            ],
+            "type": "string"
+          },
+          "GetSocialSecurityNumber": {
+            "type": "boolean"
+          },
+          "PreFilledSocialSecurityNumber": {
+            "type": "string"
+          },
+          "PageTitle": {
+            "type": "string"
+          },
+          "ExternalReference": {
+            "type": "string"
+          },
+          "Addonservices": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "example": {
+          "IdentityProvider": 2,
+          "ReturnUrls": {
+            "Error": "https://secure.wayneenterprises.com/auth/error.aspx?status=[0]",
+            "Abort": "https://secure.wayneenterprises.com/auth/abort.aspx?requestid=[1]&externalid=[2]",
+            "Success": "https://secure.wayneenterprises.com/auth/success.aspx?requestid=[1]&externalid=[2]"
+          },
+          "iFrame": {
+            "Domain": "secure.wayneenterprises.com",
+            "WebMessaging": true
+          },
+          "Language": 0,
+          "GetSocialSecurityNumber": true,
+          "ExternalReference": "765a7ed2d95c4000b14d7a48eb267546",
+          "Addonservices": {
+            "no.personal.info": null
+          }
+        }
+      },
+      "ReturnUrls": {
+        "required": [
+          "Error",
+          "Abort",
+          "Success"
+        ],
+        "type": "object",
+        "properties": {
+          "Error": {
+            "type": "string"
+          },
+          "Abort": {
+            "type": "string"
+          },
+          "Success": {
+            "type": "string"
+          }
+        }
+      },
+      "iFrameSettings": {
+        "required": [
+          "Domain"
+        ],
+        "type": "object",
+        "properties": {
+          "Domain": {
+            "type": "string"
+          },
+          "WebMessaging": {
+            "type": "boolean"
+          },
+          "Height": {
+            "format": "int32",
+            "type": "integer"
+          }
+        }
+      },
+      "CreateIdentificationResponse": {
+        "type": "object",
+        "properties": {
+          "Url": {
+            "type": "string"
+          },
+          "RequestId": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "Url": "https://rune10.unipluss.no/authportal//NoBankIDMobile/Start?sessionid=3HtyxmFpQ5zXQ5o7aBvTYpbq630jvpNlZe1TNwzSi81v2&providerId=c4ab63ae-81b6-49d2-b75c-a17301071188&iframe=False&webmessaging=False&language=NO&errorUrl=aHR0cHM6Ly9pZHRlc3Quc2lnbmVyZS5uby90ZXN0L2Vycm9yP3N0YXR1cz1bMF0%3D&",
+          "RequestId": "25191832985138881678wuuPNTgWL4Aq7RsIemzU8umZSsYNWcEFH1PbCVkdfHZjb6tfnyeTo4mDcvOoEP0z4zvvpcx0zoriRdYbETGLLwHJPkFXRjlRs0kpgeKvANFKkHA0CJGGFYQpbTfht08riaJcpKoRY4vHRJjANxfITbS7bYlFTFR37PEAqcsArnVrcuNyjnvp"
+        }
+      },
+      "IdentificationCompleteResponse": {
+        "type": "object",
+        "properties": {
+          "Done": {
+            "type": "boolean"
+          }
+        }
+      },
+      "InvalidateIdentificationRequest": {
+        "required": [
+          "RequestId"
+        ],
+        "type": "object",
+        "properties": {
+          "RequestId": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "RequestId": "25191832985138881678wuuPNTgWL4Aq7RsIemzU8umZSsYNWcEFH1PbCVkdfHZjb6tfnyeTo4mDcvOoEP0z4zvvpcx0zoriRdYbETGLLwHJPkFXRjlRs0kpgeKvANFKkHA0CJGGFYQpbTfht08riaJcpKoRY4vHRJjANxfITbS7bYlFTFR37PEAqcsArnVrcuNyjnvp"
+        }
+      },
+      "CreateBankIDMobileRequest": {
+        "required": [
+          "MobileNumber",
+          "DateOfBirth"
+        ],
+        "type": "object",
+        "properties": {
+          "MobileNumber": {
+            "pattern": "[0-9]{1,8}",
+            "type": "string"
+          },
+          "DateOfBirth": {
+            "pattern": "[0-9]{1,6}",
+            "type": "string"
+          },
+          "GetSocialSecurityNumber": {
+            "type": "boolean"
+          },
+          "ExternalReference": {
+            "type": "string"
+          },
+          "Addonservices": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "example": {
+          "MobileNumber": "99887766",
+          "DateOfBirth": "071283",
+          "GetSocialSecurityNumber": true,
+          "ExternalReference": "765a7ed2d95c4000b14d7a48eb267546",
+          "Addonservices": {
+            "no.personal.info": null
+          }
+        }
+      },
+      "CreateBankIDMobileResponse": {
+        "type": "object",
+        "properties": {
+          "RequestId": {
+            "type": "string"
+          },
+          "MerchantRef": {
+            "type": "string"
+          },
+          "Error": {
+            "$ref": "#/definitions/Error"
+          },
+          "OK": {
+            "type": "boolean"
+          },
+          "InvalidMobileNumberOrDateOfBirth": {
+            "type": "boolean"
+          }
+        },
+        "example": {
+          "RequestId": "25191832985138881678wuuPNTgWL4Aq7RsIemzU8umZSsYNWcEFH1PbCVkdfHZjb6tfnyeTo4mDcvOoEP0z4zvvpcx0zoriRdYbETGLLwHJPkFXRjlRs0kpgeKvANFKkHA0CJGGFYQpbTfht08riaJcpKoRY4vHRJjANxfITbS7bYlFTFR37PEAqcsArnVrcuNyjnvp",
+          "MerchantRef": "SNILL BANK",
+          "Error": {
+            "NativeErrorCode": "C161",
+            "ErrorCode": "0",
+            "ErrorMessage": "Sluttbruker har tastet feil mobilnummer eller fødselsdato."
+          },
+          "OK": false,
+          "InvalidMobileNumberOrDateOfBirth": true
+        }
+      }
+    },
+    "securityDefinitions": {
+      "oauth2": {
+        "type": "oauth2",
+        "description": "OAuth2 Application Grant/Client Credentials",
+        "flow": "application",
+        "tokenUrl": "https://rune10.unipluss.no/oauth/connect/token",
+        "scopes": {
+          "root": "Root OAuth apikey (General access)",
+          "identify": "Identify scope"
+        }
+      }
+    },
+    "externalDocs": {
+      "description": "Download SDKs",
+      "url": "https://rune10.unipluss.no/authportal/SDKs"
+    }
+  }
