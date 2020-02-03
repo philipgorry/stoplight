@@ -1,0 +1,631 @@
+{
+    "status": "Success",
+    "statusCode": 200,
+    "data": [
+        {
+            "_id": "58b8dd5725eca228b9de28d5",
+            "area": {
+                "_id": "58ae6988dfe9e03674061f34",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Kebon Jeruk",
+                "__v": 0
+            },
+            "address": "Jl. Panjang No.28, RT.6/RW.11, Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530, Indonesia",
+            "restaurant": {
+                "_id": "58b8dcfb25eca228b9de28d4",
+                "name": "Gorry Gourmet",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58b8dcfb25eca228b9de28d4.jpeg",
+                "cuisineType": "Western"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.76915839999992,
+                    -6.1933229
+                ]
+            }
+        },
+        {
+            "_id": "58aeaa2d7727675d15fb3634",
+            "area": {
+                "_id": "58ae6988dfe9e03674061f34",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Kebon Jeruk",
+                "__v": 0
+            },
+            "address": "Jl. Raya Perjuangan No. 11, Taman Kedoya Permai, Kebon Jeruk, RT.1/RW.7, Kb. Jeruk, Kota Jakarta Barat, DKI Jakarta 11520, Indonesia",
+            "restaurant": {
+                "_id": "58ac7955d5111808054760c7",
+                "name": "MM Juice",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58ac7955d5111808054760c7_1499066700449.jpeg",
+                "cuisineType": "Others"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75804560000006,
+                    -6.1912696
+                ]
+            }
+        },
+        {
+            "_id": "58ec89b22314585ece928ba0",
+            "area": {
+                "_id": "58ae6988dfe9e03674061f34",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Kebon Jeruk",
+                "__v": 0
+            },
+            "address": "Kebon Jeruk, West Jakarta City, Jakarta, Indonesia",
+            "restaurant": {
+                "_id": "58ec8714b9e5635eae8ebc50",
+                "name": "Coca Suki",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58ec8714b9e5635eae8ebc50.png",
+                "cuisineType": "Japanese"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.7647475,
+                    -6.183459
+                ]
+            }
+        },
+        {
+            "_id": "58e5f9a5a568a122e89530e8",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan No.40, Meruya Utara, Kembangan, Kota Jakarta Barat, DKI Jakarta 11620, Indonesia",
+            "restaurant": {
+                "_id": "58e5f7a8a568a122e89530e1",
+                "name": "Clairmont",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58e5f7a8a568a122e89530e1.jpeg",
+                "cuisineType": "Others"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75624119999998,
+                    -6.1916076
+                ]
+            }
+        },
+        {
+            "_id": "58ad6e28dfe9e03674061dcb",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan No. 2, Jl. Pesanggrahan, RT.1/RW.7, Kembangan Sel., Kembangan, Kota Jakarta Barat, DKI Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "58ac7eb7d5111808054760d3",
+                "name": "Starbucks",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58ac7eb7d5111808054760d3.jpeg",
+                "cuisineType": "Others"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75619449999999,
+                    -6.1884148
+                ]
+            }
+        },
+        {
+            "_id": "58fed6847eacf37deb7e3a12",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan No.2, RT.1/RW.7, Kembangan Sel., Kembangan, Kota Jakarta Barat, DKI Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "58fed4207eacf37deb7e3a0d",
+                "name": "Ninety-Nine",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58fed4207eacf37deb7e3a0d_1499228190735.jpeg",
+                "cuisineType": "Western"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75599369999998,
+                    -6.1883734
+                ]
+            }
+        },
+        {
+            "_id": "58ae69c6dfe9e03674061f39",
+            "area": {
+                "_id": "58ae6988dfe9e03674061f34",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Kebon Jeruk",
+                "__v": 0
+            },
+            "address": "Jl. Panjang Arteri Klp. Dua No.18, RT.2/RW.2, Kb. Jeruk, Kota Jakarta Barat, DKI Jakarta 11520, Indonesia",
+            "restaurant": {
+                "_id": "58ad70dfdfe9e03674061de2",
+                "name": "HolyCow! Steakhouse by Chef Afit",
+                "__v": 0,
+                "s3ImagePath": "dev/restaurant/58ad70dfdfe9e03674061de2.jpeg",
+                "cuisineType": "Western"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.76940420000005,
+                    -6.199764999999998
+                ]
+            }
+        },
+        {
+            "_id": "58e20e19e01f845491e4f046",
+            "area": {
+                "_id": "58ad53f0324f62362841056f",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Meruya",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan, Meruya Utara, Kembangan, Kota Jakarta Barat, DKI Jakarta, Indonesia",
+            "restaurant": {
+                "_id": "58e20c59e01f845491e4f03f",
+                "name": "Bakso Solo Samrat",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58e20c59e01f845491e4f03f_1499164862051.jpeg",
+                "cuisineType": "Indonesian"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75568909999993,
+                    -6.1938955
+                ]
+            }
+        },
+        {
+            "_id": "58abf89cdf2ad905466a0cf6",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan No 168, Meruya Utara, Kembangan, Kota Jakarta Barat, DKI Jakarta, Indonesia",
+            "restaurant": {
+                "_id": "58abf7ebdf2ad905466a0cf0",
+                "name": "Ikkudo Ichi",
+                "__v": 0,
+                "s3ImagePath": "dev/restaurant/58abf7ebdf2ad905466a0cf0.jpeg",
+                "cuisineType": "Japanese"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75568909999993,
+                    -6.1938955
+                ]
+            }
+        },
+        {
+            "_id": "5942502437a961701a5937a3",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan, Meruya Utara, Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11620, Indonesia",
+            "restaurant": {
+                "_id": "59424fea37a961701a5937a1",
+                "name": "Chuan Tin",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/59424fea37a961701a5937a1_1499066774005.jpeg",
+                "cuisineType": "Chinese"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75657439999998,
+                    -6.1960234
+                ]
+            }
+        },
+        {
+            "_id": "590c50e979a35b45e9e62d2c",
+            "area": {
+                "_id": "58ae6988dfe9e03674061f34",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Kebon Jeruk",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan No.6, RT.11/RW.3, Meruya Utara, Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11620, Indonesia",
+            "restaurant": {
+                "_id": "590c50d579a35b45e9e62d2b",
+                "name": "Bakso Aan",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/590c50d579a35b45e9e62d2b_1499074086223.jpeg",
+                "cuisineType": "Indonesian"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75536740000007,
+                    -6.193551800000001
+                ]
+            }
+        },
+        {
+            "_id": "591e9e8079a35b45e9e63319",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan No.41, RT.2/RW.7, 7, Kembangan Sel., Jakarta Barat, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "591e9dee79a35b45e9e63316",
+                "name": "Little Ubud",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/591e9dee79a35b45e9e63316_1499073949913.jpeg",
+                "cuisineType": "Indonesian"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75513799999999,
+                    -6.189817
+                ]
+            }
+        },
+        {
+            "_id": "590c266f79a35b45e9e62cbb",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan No.41, RT.2/RW.7, 7, Kembangan Sel., Jakarta Barat, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "590c256179a35b45e9e62cb6",
+                "name": "Medan Baru",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/590c256179a35b45e9e62cb6_1499067503090.jpeg",
+                "cuisineType": "Indonesian"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75513799999999,
+                    -6.189817
+                ]
+            }
+        },
+        {
+            "_id": "594256cb37a961701a5937c0",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Pesanggrahan No.41, RT.2/RW.7, 7, Kembangan Sel., Jakarta Barat, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "594256a637a961701a5937bf",
+                "name": "Eastern Kopi TM",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/594256a637a961701a5937bf_1499067696233.jpeg",
+                "cuisineType": "Others"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75513799999999,
+                    -6.189817
+                ]
+            }
+        },
+        {
+            "_id": "5b9b7dba6ba9b16f3f8d28cd",
+            "area": {
+                "_id": "58ae6988dfe9e03674061f34",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Kebon Jeruk",
+                "__v": 0
+            },
+            "address": "jalan kedoya raya nomer 35 Taman Jajan Polabugar, RT.1/RW.3, Kedoya Sel., Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11520, Indonesia",
+            "restaurant": {
+                "_id": "5b9b7c436ba9b16f3f8d28ca",
+                "name": "Sate Babi Johan",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/5b9b7c436ba9b16f3f8d28ca_1536916548305.jpeg",
+                "cuisineType": "Indonesian"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75849399999993,
+                    -6.1813
+                ]
+            }
+        },
+        {
+            "_id": "58ae5c22dfe9e03674061e85",
+            "area": {
+                "_id": "589c2ce37bae5b5789c7d0d2",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Lippo Mall Puri",
+                "__v": 0
+            },
+            "address": "Mall Puri Indah, Jl. Puri Indah, Kembangan Sel., Kembangan, Kota Jakarta Barat, DKI Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "58adaaccdfe9e03674061df7",
+                "name": "Kintan Buffet",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58adaaccdfe9e03674061df7_1499068313710.jpeg",
+                "cuisineType": "Japanese"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75314909999997,
+                    -6.184721499999998
+                ]
+            }
+        },
+        {
+            "_id": "5922c3dd79a35b45e9e6375f",
+            "area": {
+                "_id": "58ac7406d5111808054760b5",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Greenville",
+                "__v": 0
+            },
+            "address": "Jl. Taman Ratu Indah, Duri Kepa, Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta, Indonesia",
+            "restaurant": {
+                "_id": "5922c2b579a35b45e9e6375b",
+                "name": "Atek",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/5922c2b579a35b45e9e6375b_1497946140068.jpeg",
+                "cuisineType": "Others"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.767739,
+                    -6.1774944
+                ]
+            }
+        },
+        {
+            "_id": "5922bff579a35b45e9e63753",
+            "area": {
+                "_id": "58ac7406d5111808054760b5",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Greenville",
+                "__v": 0
+            },
+            "address": "Jl. Taman Ratu Indah, Duri Kepa, Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta, Indonesia",
+            "restaurant": {
+                "_id": "5922bf7d79a35b45e9e63751",
+                "name": "Central Restaurant",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/5922bf7d79a35b45e9e63751_1499165219463.jpeg",
+                "cuisineType": "Chinese"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.767739,
+                    -6.1774944
+                ]
+            }
+        },
+        {
+            "_id": "595df5a737a961701a593fd4",
+            "area": {
+                "_id": "58ac008499eb4005ba75a940",
+                "city": "58abcdbde58a09658d613203",
+                "name": "Serpong",
+                "__v": 0
+            },
+            "address": "no 11610, Jl. Puri Kembangan No.1128B, RT.1/RW.8, Kembangan Sel., Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "595df55b37a961701a593fd3",
+                "name": "Mie Keriting Siantar “ATEK”",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/595df55b37a961701a593fd3_1499329880991.jpeg",
+                "cuisineType": "Chinese"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75302699999997,
+                    -6.184092999999999
+                ]
+            }
+        },
+        {
+            "_id": "5b7b99cba7b19e54078e44b5",
+            "area": {
+                "_id": "58ad53f0324f62362841056f",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Meruya",
+                "__v": 0
+            },
+            "address": "Ruko Grand Aries Niaga Blok G1 No. 2-O Meruya, Kembangan, RT.12/RW.3, Meruya Utara, Kembangan, DKI Jakarta, Daerah Khusus Ibukota Jakarta 11620, Indonesia",
+            "restaurant": {
+                "_id": "5b7b9981a7b19e54078e44b3",
+                "name": "Say Something Coffee",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/5b7b9981a7b19e54078e44b3_1534826875610.jpeg",
+                "cuisineType": "Others"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75110700000005,
+                    -6.191789
+                ]
+            }
+        },
+        {
+            "_id": "58f4abd37eacf37deb7e3456",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Puri Kembangan Raya, Kembangan Sel., Kembangan, Kota Jakarta Barat, DKI Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "58f4aaf17eacf37deb7e3450",
+                "name": "Bakmi Aloi",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58f4aaf17eacf37deb7e3450.jpeg",
+                "cuisineType": "Chinese"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75256669999999,
+                    -6.1844608
+                ]
+            }
+        },
+        {
+            "_id": "590c53bf79a35b45e9e62d36",
+            "area": {
+                "_id": "58ad53f0324f62362841056f",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Meruya",
+                "__v": 0
+            },
+            "address": "Jl. Meruya Ilir, Meruya Utara, Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta, Indonesia",
+            "restaurant": {
+                "_id": "590c533979a35b45e9e62d32",
+                "name": "Martabak Bandung Jaya",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/590c533979a35b45e9e62d32_1497519789106.jpeg",
+                "cuisineType": "Others"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.75066449999997,
+                    -6.197300200000001
+                ]
+            }
+        },
+        {
+            "_id": "58e4b399e01f845491e4f1ff",
+            "area": {
+                "_id": "589c98b1762285587e4305fc",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Puri Indah",
+                "__v": 0
+            },
+            "address": "Jl. Puri Kencana, Kembangan Sel., Kembangan, Kota Jakarta Barat, DKI Jakarta 11610, Indonesia",
+            "restaurant": {
+                "_id": "58e4b21be01f845491e4f1f7",
+                "name": "Midori",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/58e4b21be01f845491e4f1f7.jpeg",
+                "cuisineType": "Japanese"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.74839550000002,
+                    -6.190812199999999
+                ]
+            }
+        },
+        {
+            "_id": "59155f6279a35b45e9e631f5",
+            "area": {
+                "_id": "58ac7406d5111808054760b5",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Greenville",
+                "__v": 0
+            },
+            "address": "Jl. Meruya Ilir Raya No.45, RT.5/RW.8, Srengseng, Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630, Indonesia",
+            "restaurant": {
+                "_id": "59155ccc79a35b45e9e631e9",
+                "name": "Abuba Steak",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/59155ccc79a35b45e9e631e9_1494572233741.jpeg",
+                "cuisineType": "Western"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.74963000000002,
+                    -6.1978333
+                ]
+            }
+        },
+        {
+            "_id": "5b73a22fa7b19e54078d55d4",
+            "area": {
+                "_id": "58ad53f0324f62362841056f",
+                "city": "587c2fb07c0299040693ea7e",
+                "name": "Meruya",
+                "__v": 0
+            },
+            "address": "Blok A11 No., Jl. Perumahan Corn Kebun Jeruk No.19, RT.5/RW.8, Srengseng, Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630, Indonesia",
+            "restaurant": {
+                "_id": "5b73a19ca7b19e54078d55cf",
+                "name": "Bakmi Ayam Alok",
+                "__v": 0,
+                "s3ImagePath": "prod/restaurant/5b73a19ca7b19e54078d55cf_1534304649544.jpeg",
+                "cuisineType": "Indonesian"
+            },
+            "__v": 0,
+            "location": {
+                "type": "Point",
+                "coordinates": [
+                    106.74874869999996,
+                    -6.1986156
+                ]
+            }
+        }
+    ]
+}
